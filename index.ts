@@ -44,14 +44,14 @@
 // a = '111';
 // console.log(a);
 
-function isNumber(value: any): value is string {
-    // 可以进行进一步处理
-    return typeof value === "number";
-}
+// function isNumber(value: any): value is string {
+//     // 可以进行进一步处理
+//     return typeof value === "number";
+// }
 
-function isString(value: any): value is string {
-    return typeof value === "string"
-}
+// function isString(value: any): value is string {
+//     return typeof value === "string"
+// }
 
 // const log = (value: any) => {
 //  console.log(typeof value);

@@ -4,9 +4,21 @@ class Person {
     protected firstName: string;
     protected lastName: string;
 
-    protected constructor(firstName: string, lastName: string) {
+    private static age: number = 10;
+
+    public constructor(firstName: string, lastName: string) {
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    readonly name: string = 'wanggou';
+
+    getAge() {
+        return `my age is ${Person.age}`
+    }
+
+    static getStaticAge() {
+        return `my age is ${Person.age}`
     }
 
     public greet() {
@@ -48,7 +60,11 @@ class Person {
     }
 }
 
-// let aPerson = new Person("rails365", "hfpp2012");
+let aPerson = new Person("rails365", "hfpp2012");
+console.log(aPerson.name);
+// console.log(aPerson.getAge());
+// console.log(Person.getStaticAge());
+
 // 相当于 set 方法
 // aPerson.firstName = "rails365"
 // 相当于 get 方法
@@ -103,7 +119,10 @@ class Programmer extends Person {
     }
 }
 
-let aProgrammer = new Programmer("rails365", "hfpp2012");
+
+// console.log(Programmer.getStaticAge());
+// console.log(Person.age);
+// let aProgrammer = new Programmer("rails365", "hfpp2012");
 // console.log(aProgrammer.firstName);
 // 继承过来的方法
 // aProgrammer.getFirstName();

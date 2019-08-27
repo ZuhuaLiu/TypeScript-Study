@@ -14,9 +14,16 @@ var __extends = (this && this.__extends) || (function () {
 // 模板
 var Person = /** @class */ (function () {
     function Person(firstName, lastName) {
+        this.name = 'wanggou';
         this.firstName = firstName;
         this.lastName = lastName;
     }
+    Person.prototype.getAge = function () {
+        return "my age is " + Person.age;
+    };
+    Person.getStaticAge = function () {
+        return "my age is " + Person.age;
+    };
     Person.prototype.greet = function () {
         console.log('hi');
     };
@@ -47,9 +54,14 @@ var Person = /** @class */ (function () {
         this.greet();
         console.log('*****');
     };
+    Person.age = 10;
     return Person;
 }());
-// let aPerson = new Person("rails365", "hfpp2012");
+var aPerson = new Person("rails365", "hfpp2012");
+aPerson.name = '22';
+console.log(aPerson.name);
+// console.log(aPerson.getAge());
+// console.log(Person.getStaticAge());
 // 相当于 set 方法
 // aPerson.firstName = "rails365"
 // 相当于 get 方法
@@ -98,7 +110,9 @@ var Programmer = /** @class */ (function (_super) {
     };
     return Programmer;
 }(Person));
-var aProgrammer = new Programmer("rails365", "hfpp2012");
+// console.log(Programmer.getStaticAge());
+// console.log(Person.age);
+// let aProgrammer = new Programmer("rails365", "hfpp2012");
 // console.log(aProgrammer.firstName);
 // 继承过来的方法
 // aProgrammer.getFirstName();
