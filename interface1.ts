@@ -45,3 +45,5 @@ let x: any;
 x = "hi there";
 let s = (<string>x).substring(0,5);
 console.log(typeof s);
+
+function 

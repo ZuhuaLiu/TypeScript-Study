@@ -39,6 +39,9 @@ class Bike {
     }
 }
 
+function isCar(vehicle: Bike | Car): void {
+    
+}
 function move(vehicle: Bike | Car): void {
     vehicle.start();
     // console.log(vehicle.drive);

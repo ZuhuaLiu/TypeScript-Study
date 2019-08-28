@@ -1,0 +1,13 @@
+"use strict";
+var s = { 'enabled': true, 'maximized': false };
+console.log(s);
+console.log(s["enabled"]);
+var s1 = [22, 34, 45, 1];
+console.log(s1);
+// console.log(s1);
+// console.log(s1[0]);
+var s2 = [1, 2, 3];
+var s3 = [true, false, false, false];
+console.log(s3);
+console.log(s3.length);
+console.log(s3.pop());
