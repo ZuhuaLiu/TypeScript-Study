@@ -32,13 +32,13 @@
 // a = 10;
 // a = '111';
 // console.log(a);
-function isNumber(value) {
-    // 可以进行进一步处理
-    return typeof value === "number";
-}
-function isString(value) {
-    return typeof value === "string";
-}
+// function isNumber(value: any): value is string {
+//     // 可以进行进一步处理
+//     return typeof value === "number";
+// }
+// function isString(value: any): value is string {
+//     return typeof value === "string"
+// }
 // const log = (value: any) => {
 //  console.log(typeof value);
 //  if (isNumber(value)) {
